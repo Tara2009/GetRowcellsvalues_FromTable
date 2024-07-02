@@ -12,19 +12,9 @@ Entering a Contacts
     Appstate               Home
     LaunchApp              Sales
     ClickText              Contacts
-    ClickUntil             New Contact                 New
-    UseModal               On
-    TypeText               Phone                       +9173966374987
-    Picklist               Salutation                  Mr.
-    TypeText               First Name                  TaraDoneUploadFile
-    TypeText               Last Name                   ch
-    TypeText               Person Location             this345
-    ComboBox               Search Accounts...          GenePoint
-    TypeText               Email                       tvsh@gmail.com
-    TypeText               Title                       project30
-    ClickText              Save                        partial_match=False
-    UseModal               Off
-    Sleep                  10s
+    ClickText          Select a List View: Contacts
+    ClickText          All Contacts
+    TypeText           Search this list...         vinnu\n
 
     # End creation of contacts
 
