@@ -24,6 +24,7 @@ Entering a Contacts
     Sleep              10s
     Log                'Table Row Count : ' ${ContactCount}
     Log                'Table Column Header Count : ' ${gettabcol}
+    Log                 'Table Cell value is : ' ${getcellvalue}
     Sleep              2s
 
     # End creation of contacts
