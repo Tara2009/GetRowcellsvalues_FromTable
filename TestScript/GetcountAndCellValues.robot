@@ -16,6 +16,10 @@ Entering a Contacts
     ClickText          Select a List View: Contacts
     ClickText          All Contacts
     TypeText           Search this list...         vinnu\n
+    UseTable            xpath\=//div[@class\='slds-grid listDisplays safari-workaround-anchor']
+    Sleep               20s
+    ${ContactCount}=    GetTableRow                 //last    skip_header=True    delay=40s
+    Sleep              30s
 
     # End creation of contacts
 
