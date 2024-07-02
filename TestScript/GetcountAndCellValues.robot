@@ -19,8 +19,10 @@ Entering a Contacts
     UseTable            xpath\=//table[@class\='slds-table forceRecordLayout slds-table_header-fixed slds-table--header-fixed slds-table_edit slds-table--edit slds-table_bordered slds-table--bordered resizable-cols slds-table--resizable-cols uiVirtualDataTable']
     Sleep               10s
     ${ContactCount}=    GetTableRow                 //last    skip_header=True    delay=40s
+    ${gettabcol}=       GetColHeaderCount           
     Sleep              10s
-    Log                ${ContactCount}
+    Log                'Table Row Count : ' ${ContactCount}
+    Log                'Table Column Header Count : ' ${gettabcol}
     Sleep              2s
 
     # End creation of contacts
