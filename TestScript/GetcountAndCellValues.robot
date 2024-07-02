@@ -15,11 +15,11 @@ Entering a Contacts
     ClickText          Contacts
     ClickText          Select a List View: Contacts
     ClickText          All Contacts
-    TypeText           Search this list...         vinnu\n
+    TypeText           Search this list...         test\n
     UseTable            xpath\=//table[@class\='slds-table forceRecordLayout slds-table_header-fixed slds-table--header-fixed slds-table_edit slds-table--edit slds-table_bordered slds-table--bordered resizable-cols slds-table--resizable-cols uiVirtualDataTable']
-    Sleep               20s
+    Sleep               10s
     ${ContactCount}=    GetTableRow                 //last    skip_header=True    delay=40s
-    Sleep              30s
+    Sleep              10s
     Log                ${ContactCount}
     Sleep              2s
 
