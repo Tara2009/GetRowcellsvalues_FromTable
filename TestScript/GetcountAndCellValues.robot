@@ -20,6 +20,8 @@ Entering a Contacts
     Sleep               20s
     ${ContactCount}=    GetTableRow                 //last    skip_header=True    delay=40s
     Sleep              30s
+    Log                ${ContactCount}
+    Sleep              2s
 
     # End creation of contacts
 
