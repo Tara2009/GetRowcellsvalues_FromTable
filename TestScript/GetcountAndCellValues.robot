@@ -22,7 +22,7 @@ Entering a Contacts
     ${gettabcol}=       GetColHeaderCount     
     ${getcellvalue}=    GetCellText                 r2c6      #get cell value from specific cell
     ${getlastbutoneval}=  GetCellText               r-2c6     #get last but one record cell value
-    ${getcontsear}=       GetCellText               r?9890/c5 # search the value from cell in the table and get the cell 6 value
+    ${getcontsear}=       GetCellText               r?9890/c7 # search the value from cell in the table and get the cell 6 value
     Sleep              10s
     Log                'Table Row Count : ' ${ContactCount}
     Log                'Table Column Header Count : ' ${gettabcol}
