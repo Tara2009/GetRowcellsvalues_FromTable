@@ -20,7 +20,9 @@ Entering a Contacts
     Sleep               10s
     ${ContactCount}=    GetTableRow                 //last    skip_header=True    delay=40s
     ${gettabcol}=       GetColHeaderCount     
-    ${getcellvalue}=    GetCellText                 r4c6      
+    ${getcellvalue}=    GetCellText                 r2c6      #get cell value from specific cell
+    ${getlastbutoneval}=  GetCellText               r-2c6     #get last but one record cell value
+    ${getcontsear}=       GetCellText               r?9890/c6 # search the value from cell in the table and get the cell 6 value
     Sleep              10s
     Log                'Table Row Count : ' ${ContactCount}
     Log                'Table Column Header Count : ' ${gettabcol}
