@@ -6,6 +6,9 @@ Resource                       ../ResourceFile/SFConnect.robot
 Suite Setup                    Setup Browser
 Suite Teardown                 End suite
 
+*** Variables ***
+${TotAmt}                     0.00
+
 *** Test Cases ***
 GetTable_Row_CountandValues
     [Tags]                     GetContRec
@@ -76,10 +79,12 @@ Sum of Record Prices
     Sleep                      10s
     ${ContactCnt}=             GetTableRow                 //last                      skip_header=True            delay=40s
     Log                        ${ContactCnt}
-    FOR                        ${i}                        IN RANGE                          1                           ${ContactCnt}+1
+    FOR                        ${i}                        IN RANGE                    1                           ${ContactCnt}+1
         Log                    ${i}
         Log                    r+${i}+c7
         ${GetPrice}=           GetCellText                 r+${i}+c7
         Log                    ${GetPrice}
+        ${TotAmt}=             Evaluate                    ${TotAmt}+${GetPrice}
+        Log                    ${TotAmt}
 
     END
