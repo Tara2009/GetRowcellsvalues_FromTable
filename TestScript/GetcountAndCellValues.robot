@@ -44,7 +44,7 @@ GetTableNumberAndValue
     Sleep                   10s
     ${ContactCnt}=          GetTableRow                 //last                      skip_header=True            delay=40s
     Log                     ${ContactCnt}
-    FOR                     ${i}                        IN RANGE                    1                           ${ContactCnt}
+    FOR                     ${i}                        IN RANGE                    1                           ${ContactCnt}+1
         Log                 ${i}
     END
 
