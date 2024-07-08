@@ -7,7 +7,7 @@ Suite Setup            Setup Browser
 Suite Teardown         End suite
 
 *** Test Cases ***
-Entering a Contacts
+GetTable_Row_CountandValues
     [Tags]             GetContRec
     [Documentation]    Get Record count and read the record cell values.
     Appstate           Home
