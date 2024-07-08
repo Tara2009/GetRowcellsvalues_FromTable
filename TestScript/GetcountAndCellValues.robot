@@ -6,8 +6,6 @@ Resource                       ../ResourceFile/SFConnect.robot
 Suite Setup                    Setup Browser
 Suite Teardown                 End suite
 
-*** Variables ***
-${TotAmt}                     0.00
 
 *** Test Cases ***
 GetTable_Row_CountandValues
