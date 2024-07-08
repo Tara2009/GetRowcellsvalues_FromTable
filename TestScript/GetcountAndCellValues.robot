@@ -46,5 +46,8 @@ GetTableNumberAndValue
     Log                     ${ContactCnt}
     FOR                     ${i}                        IN RANGE                    1                           ${ContactCnt}+1
         Log                 ${i}
+        Log                 r+${i}+c6
+        ${Getcellval_bloopval}=                        GetCellText                  r+${i}+c6
+        Log                        ${Getcellval_bloopval}
     END
 
