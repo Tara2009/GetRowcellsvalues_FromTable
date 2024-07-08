@@ -45,6 +45,17 @@ GetTableNumberAndValue
     ${ContactCnt}=          GetTableRow                 //last                      skip_header=True            delay=40s
     Log                     ${ContactCnt}
     ${cellval}=             GetCellText                 r1c1
+    ${cellval1}=            GetCellText                r1c2
+    ${cellval2}=            GetCellText                r1c3
+    ${cellval3}=            GetCellText                r1c4
+    ${cellval4}=            GetCellText                r1c5
+    ${cellval5}=            GetCellText                r1c6
+    Log                     ${cellval}
+    Log                     ${cellval1}
+    Log                     ${cellval2}
+    Log                     ${cellval3}
+    Log                     ${cellval4}
+    Log                     ${cellval5}
     FOR                     ${i}                        IN RANGE                    1                           ${ContactCnt}+1
         Log                 ${i}
         Log                 r+${i}+c6
