@@ -31,4 +31,17 @@ GetTable_Row_CountandValues
 
     # End creation of contacts
 
+GetTableNumberAndValue
+    [Tags]    Gettablenoandval
+    [Documentation]     Get Table Cell Value based on the Row Number using for Loop
+    Appstate            Home
+    LaunchApp           Sales
+    ClickText           Contacts
+    ClickText           Select a List View: Contacts
+    ClickText           All Contacts
+    TypeText            Search this list...        vinnu\n
+    UseTable            xpath\=//table[@class\='slds-table forceRecordLayout slds-table_header-fixed slds-table--header-fixed slds-table_edit slds-table--edit slds-table_bordered slds-table--bordered resizable-cols slds-table--resizable-cols uiVirtualDataTable']
+    Sleep               10s
+    ${ContactCnt}=      GetTableRow                //last    skip_header=True    delay=40s
+    Log                 ${ContactCnt}
 
