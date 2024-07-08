@@ -83,7 +83,8 @@ Sum of Record Prices
         Log                    r+${i}+c7
         ${GetPrice}=           GetCellText                 r+${i}+c7
         Log                    ${GetPrice}
-        ${TotAmt}=             Evaluate                    ${GetPrice}
+        ${RemoveStr}=          Remove String               ${GetPrice}                 ,
+        ${TotAmt}=             Evaluate                    ${RemoveStr}+100
         Log                    ${TotAmt}
 
     END
