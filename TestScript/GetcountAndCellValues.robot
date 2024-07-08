@@ -44,6 +44,7 @@ GetTableNumberAndValue
     Sleep                   10s
     ${ContactCnt}=          GetTableRow                 //last                      skip_header=True            delay=40s
     Log                     ${ContactCnt}
+    ${cellval}=             GetCellText                 r1c1
     FOR                     ${i}                        IN RANGE                    1                           ${ContactCnt}+1
         Log                 ${i}
         Log                 r+${i}+c6
