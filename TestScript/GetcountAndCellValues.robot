@@ -88,5 +88,5 @@ Sum of Record Prices
         ${RemoveStr}=          Remove String               ${GetPrice}                 $                        ,
         ${TotAmt}=             Evaluate                    ${RemoveStr}+${TotAmt}
         Log                    ${TotAmt}
-
     END
+    Sleep                      3s
