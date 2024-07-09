@@ -79,6 +79,7 @@ Sum of Record Prices
     ${ContactCnt}=             GetTableRow                 //last                      skip_header=True            delay=40s
     Log                        ${ContactCnt}
     #${TotAmt}                 0.00
+    ${TotAmt}=                 Set Variable                ${0.00}
     FOR                        ${i}                        IN RANGE                    1                           ${ContactCnt}+1
         Log                    ${i}
         Log                    r+${i}+c7
