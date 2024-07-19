@@ -90,3 +90,16 @@ Sum of Record Prices
         Log                    ${TotAmt}
     END
     Sleep                      3s
+
+Get RecordTag Value
+    [Tags]                     GetRcdValue
+    [Documentation]            Get Record Value from the header
+    Appstate                   Home
+    LaunchApp                  Sales
+    ClickText                  Contacts
+    ClickText                  Select a List View: Contacts
+    ClickText                  All Contacts
+    TypeText                   Search this list...         Arthur Song\n
+    ClickText                  r2c?Name                    tag=a
+    Sleep                      5s
+    
