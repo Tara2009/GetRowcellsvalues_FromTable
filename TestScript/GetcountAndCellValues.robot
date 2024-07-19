@@ -104,4 +104,8 @@ Get RecordTag Value
     Sleep                      5s
     ClickCell                  r2/c?Name                    tag=a
     Sleep                      5s
+    ${lvemamilval}                 GetAttribute                 //records-highlights-details-item[@class\='slds-page-header__detail-block']//div[@class\='slds-show_inline']//a        status
+    Sleep                        5s
+    Log                        ${lvemamilval}
+    Sleep                      4s
     
