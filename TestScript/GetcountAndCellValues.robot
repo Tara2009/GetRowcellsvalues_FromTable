@@ -100,6 +100,6 @@ Get RecordTag Value
     ClickText                  Select a List View: Contacts
     ClickText                  All Contacts
     TypeText                   Search this list...         Arthur Song\n
-    ClickText                  r2c?Name                    tag=a
+    ClickCell                  r2/c?Name                    tag=a
     Sleep                      5s
     
