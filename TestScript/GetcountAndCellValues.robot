@@ -85,7 +85,7 @@ Sum of Record Prices
         Log                    r+${i}+c7
         ${GetPrice}=           GetCellText                 r+${i}+c7
         Log                    ${GetPrice}
-        ${RemoveStr}=          Remove String               ${GetPrice}                 $                        ,
+        ${RemoveStr}=          Remove String               ${GetPrice}                 $                           ,
         ${TotAmt}=             Evaluate                    ${RemoveStr}+${TotAmt}
         Log                    ${TotAmt}
     END
@@ -102,10 +102,9 @@ Get RecordTag Value
     TypeText                   Search this list...         Arthur Song\n
     UseTable                   xpath\=//table[@class\='slds-table forceRecordLayout slds-table_header-fixed slds-table--header-fixed slds-table_edit slds-table--edit slds-table_bordered slds-table--bordered resizable-cols slds-table--resizable-cols uiVirtualDataTable']
     Sleep                      5s
-    ClickCell                  r2/c?Name                    tag=a
+    ClickCell                  r2/c?Name                   tag=a
     Sleep                      5s
-    ${lvemamilval}                 GetAttribute                 //records-highlights-details-item[@class\='slds-page-header__detail-block']//div[@class\='slds-show_inline']//a        Email
-    Sleep                        5s
+    ${lvemamilval}             GetText                //records-highlights-details-item[@class\='slds-page-header__detail-block']//div[@class\='slds-show_inline']//a    
+    Sleep                      5s
     Log                        ${lvemamilval}
     Sleep                      4s
-    
