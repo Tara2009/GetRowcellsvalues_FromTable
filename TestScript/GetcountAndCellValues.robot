@@ -100,6 +100,8 @@ Get RecordTag Value
     ClickText                  Select a List View: Contacts
     ClickText                  All Contacts
     TypeText                   Search this list...         Arthur Song\n
+    UseTable                   xpath\=//table[@class\='slds-table forceRecordLayout slds-table_header-fixed slds-table--header-fixed slds-table_edit slds-table--edit slds-table_bordered slds-table--bordered resizable-cols slds-table--resizable-cols uiVirtualDataTable']
+    Sleep                      5s
     ClickCell                  r2/c?Name                    tag=a
     Sleep                      5s
     
